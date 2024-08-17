@@ -1,0 +1,80 @@
+/* Define custom color variables */:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --button-hover-color: #2980b9;
+}
+
+/* Global styles */body {
+    font-family: Arial, sans-serif; /* Fallback to a standard font */background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Headings */h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Buttons */button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+/* Blog container layout */.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Individual blog item styling */.blog-item {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 04px8pxrgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-itemh4 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Footer styles */footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footerp {
+    margin: 0;
+}
+
+/* Responsive design */@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-item {
+        padding: 15px;
+    }
+}
